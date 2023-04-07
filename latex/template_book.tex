@@ -1,0 +1,275 @@
+% Fncychap chapter styles
+\documentclass{book}
+\usepackage{lipsum}
+\usepackage[a4paper]{geometry}
+\geometry{hscale=0.81,vscale=.85,centering}
+\usepackage{caption}
+\captionsetup{labelfont=bf,size=small}
+\usepackage[Sonny]{fncychap}
+
+% ------------------------------------
+% ------------------------------------
+%
+%      Headers and Foot marl
+%
+% ------------------------------------
+% ------------------------------------
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE]{\nouppercase{\leftmark\hfill}}
+\fancyhead[RO]{\nouppercase{\hfill\rightmark}}
+\fancyfoot[LE,RO]{\hfill\thepage\hfill}
+
+
+
+
+% ------------------------------------
+% ------------------------------------
+%
+%      Basic Packages
+%
+% ------------------------------------
+% ------------------------------------
+\usepackage{lmodern}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{wrapfig}
+\usepackage{comment}
+\usepackage{siunitx}
+\usepackage{natbib}
+
+% ------------------------------------
+% ------------------------------------
+%
+%      Colors
+%
+% ------------------------------------
+% ------------------------------------
+\definecolor{llgray}{RGB}{245,245,245}
+\usepackage{framed}
+\definecolor{shadecolor}{named}{llgray}
+\definecolor{mypink}{RGB}{255,204,229}%{253,221,230}
+\definecolor{mylightblue}{RGB}{240, 248, 255}
+\definecolor{mylila}{RGB}{230,215,255}
+
+
+% ------------------------------------
+% ------------------------------------
+%
+%      Color box
+%
+% ------------------------------------
+% ------------------------------------
+
+\newenvironment{blueshaded}{%
+\def\FrameCommand{\fboxrule=\FrameRule\fboxsep=\FrameSep \fcolorbox{mylightblue}{mylightblue}}%
+    \MakeFramed {\FrameRestore}}%
+    {\endMakeFramed}
+
+\newenvironment{pinkshaded}{%
+\def\FrameCommand{\fboxrule=\FrameRule\fboxsep=\FrameSep \fcolorbox{mypink}{mypink}}%
+    \MakeFramed {\FrameRestore}}%
+    {\endMakeFramed}
+
+\newenvironment{lilashaded}{%
+\def\FrameCommand{\fboxrule=\FrameRule\fboxsep=\FrameSep \fcolorbox{mylila}{mylila}}%
+    \MakeFramed {\FrameRestore}}%
+    {\endMakeFramed}
+    
+    
+
+% ------------------------------------
+% ------------------------------------
+%
+%      Tables of contents
+%
+% ------------------------------------
+% ------------------------------------
+
+% -----
+% Changer la numérotation et ce qui apparait dans la table des matières
+% -----
+\usepackage{titletoc,lipsum,multicol}
+\usepackage{titlesec}
+\usepackage{titletoc}
+\setcounter{tocdepth}{3}
+%\setcounter{secnumdepth}{3}
+
+%\titlecontents{section}[0em]{\addvspace{10pt}\bfseries}{}{}{\titlerule*[1000pc]{.}\contentspage}
+  
+%\titleformat{\section}[display]{\normalfont \large \bfseries}{}{0pt}{}
+
+
+%\setcounter{secnumdepth}{-1}
+
+%\part{Introduction to computational neuroscience}
+%\chapter{test}
+%\lipsum[1]
+%\begin{multicols}{2}[\subsubsection*{Contents of this chapter}]
+%\printcontents{}{1}{\setcounter{tocdepth}{2}}
+%\end{multicols}
+
+
+% ------------------------------------
+% ------------------------------------
+%
+%      Glossaires
+%
+% ------------------------------------
+% ------------------------------------
+
+
+\usepackage[acronym]{glossaries}
+\makeglossaries
+
+%\newglossaryentry{Neurons}
+%{
+%    name=Neuron,
+%    description={Taper la definition du neuron}
+%}
+
+\newacronym{EPSP}{EPSP}{Excitatory Postsynaptic Potential}
+\newacronym{EPSC}{EPSC}{Excitatory Postsynaptic Current}
+\newacronym{IPSP}{IPSP}{Inhibitory Postsynaptic Potential}
+\newacronym{NA}{NA}{noradrenaline} 
+\newacronym{ACh}{ACh}{acetylcholine}
+\newacronym{5-HT}{5-HT}{serotonin}
+\newacronym{DA}{DA}{dopamine}
+\newacronym{HA}{HA}{Histamine}
+\newacronym{Glu}{Glu}{glutamate}
+\newacronym{GABA}{GABA}{gamma-aminobutyric acid}
+\newacronym{AMPA}{AMPA}{alpha-amino-3-hydroxy-5-methyl-4-isoxazolepropionic acid}
+\newacronym{NMDA}{NMDA}{N-methyl-D-aspartate}
+\newacronym{AMPAr}{AMPAr}{AMPA receptor}
+\newacronym{NMDAr}{NMDAr}{NMDA receptor}
+\newacronym{fMRI}{fMRI}{functional Magnetic Resonance Imaging}
+\newacronym{EEG}{EEG}{Electroencephalogram}
+\newacronym{ECoG}{ECoG}{electrocorticography}
+\newacronym{MEG}{MEG}{Magnetoencephalography}
+\newacronym{MEA}{MEA}{Multi-electrode array}
+\newacronym{LFP}{LFP}{Local Field Potential}
+\newacronym{PET}{PET}{Positron Emission Tomography}
+\newacronym{NREM}{NREM}{Non Rapid Eye Movement}
+\newacronym{REM}{REM}{Rapid Eye Movement}
+
+\newacronym{SPB}{SPB}{Spikes Per Burst}
+\newacronym{ADP}{ADP}{After Depolarizing Potential}
+
+\newacronym{PSD}{PSD}{postsynaptic density}
+\newacronym{LTP}{LTP}{Long Term Potentiation}
+\newacronym{LTD}{LTD}{Long Term Depression}
+\newacronym{E-LTP}{E-LTP}{Early Long Term Potentiation}
+\newacronym{L-LTP}{L-LTP}{Late Long Term Potentiation}
+\newacronym{E-LTD}{E-LTD}{Early Long Term Depression}
+\newacronym{L-LTD}{L-LTD}{Late Long Term Depression}
+
+\newacronym{CaMKII}{CaMKII}{calcium-calmodulin-dependent protein kinase II}
+\newacronym{CaM}{CaM}{calcium/calmodulin complex}
+\newacronym{CaN}{CaN}{calcineurin}
+\newacronym{cAMP}{cAMP}{cyclic adenosine monophosphate}
+\newacronym{CREB}{CREB}{cAMP-response element binding protein}
+\newacronym{PP1}{PP1}{protein phosphatase 1}
+\newacronym{STD}{STD}{Short-Term Depression}
+\newacronym{PRP}{PRP}{plasticity-related proteins}
+
+\newacronym{IF}{IF}{Integrate-and-Fire}
+\newacronym{QIF}{QIF}{Quadratic Integrate-and-Fire}
+\newacronym{AdEx}{AdEx}{Adaptive Exponential Integrate-and-Fire}
+\newacronym{HH}{HH}{Hodgkin and Huxley}
+\newacronym{BPAP}{BPAP}{Back-Propagating Action Potential}
+
+\newacronym{DIC}{DIC}{Dynamic Input Conductance}
+\newacronym{STDP}{STDP}{Spike-Time Dependent Plasticity}
+\newacronym{BTDP}{BTDP}{Burst-Time Dependent Plasticity}
+\newacronym{STP}{STP}{Short-time Dependent Plasticity}
+\newacronym{STC}{STC}{Synaptic Tagging and Capture}
+
+
+
+% ------------------------------------
+% ------------------------------------
+%
+%      Bibliography
+%
+% ------------------------------------
+% ------------------------------------
+
+
+\bibliographystyle{jneurosci}
+
+
+
+% ------------------------------------
+% ------------------------------------
+%
+%      MAIN DOCUMENT
+%
+% ------------------------------------
+% ------------------------------------
+
+\begin{document}
+\tableofcontents
+
+
+\clearpage
+\printglossary[type=\acronymtype]
+
+\printglossary
+\textcolor{red}{DISPLAY THE GLOSSARY and ACR}
+
+
+\newpage
+%-------------- Abstract
+%\input{_abstract}
+
+
+%-------------- Introduction
+\input{_introduction}
+
+
+%-------------- Global Methods
+\input{_methods}
+
+
+%-------------- Plos Comp 
+%\input{_Plos}
+
+
+% -------------- Review %--------------
+%\input{_Review}
+
+
+
+%-------------- Reset 
+%\input{_Reset}
+
+
+%-------------- Memory Task
+%\input{_Task}
+
+
+%-------------- Conclusions
+%\input{_conclusions}
+
+
+%-------------- Side Projects
+%\input{_SideProjects}
+
+%-------------- SI
+%\input{_SI}
+
+\newpage
+
+%-------------- Biblio
+\bibliography{neuro_lab.bib}
+
+\end{document}
